@@ -1,0 +1,29 @@
+.container {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 0 auto;
+  flex-direction: column;
+  text-align: center;
+}
+
+.btn-filter {
+  margin: 0.5rem;
+  outline: none;
+  border: 0;
+  background: white;
+  transition: 0.3s ease;
+  box-shadow: 0 0 1px 1px lightgray;
+}
+
+.btn-filter:hover {
+  box-shadow: 0 0 2px 1px darkslateblue;
+}
+
+.btn-filter:active {
+  box-shadow: 0 2px 2px 2px darkslateblue;
+}

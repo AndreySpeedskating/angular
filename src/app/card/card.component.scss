@@ -1,0 +1,72 @@
+.card {
+  display: flex;
+  padding: 0.3rem 0.3rem;
+  border: 1px solid black;
+  margin: 10px 5px 10px 5px;
+  width: 70vw;
+  align-items: center;
+
+
+  label, span {
+    &::before {
+      opacity: 1;
+      width: 2rem;
+      height: 2rem;
+      margin: auto;
+      align-self: center;
+      border: 1px solid #0fb80f;
+    }
+    &:hover {
+      transition: 0.3s;
+      transform: scale(0.98);
+    }
+  }
+
+  input[type="checkbox"]:checked+span:not(.lever):before {
+    border-left: 0;
+    border-bottom: 3px  solid #0fb80f;
+    border-top: 0;
+    border-right: 3px  solid #0fb80f;
+    width: 1.3rem;
+  }
+
+  input {
+    margin: 0;
+    &:checked {
+      opacity: 0;
+    }
+  }
+
+  .text {
+    display: inline-block;
+    flex-direction: row;
+    height: 2rem;
+    margin: 0 0 0 5px;
+    border: 1px solid black;
+    flex-grow: 8;
+    width: 65%;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    cursor: default;
+    overflow: hidden;
+  }
+  .text.true {
+    color: #0fb80f;
+    text-decoration: line-through;
+  }
+  .text.false {
+    color: black;
+  }
+  i {
+    color: #ee6e73;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+
+

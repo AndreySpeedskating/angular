@@ -1,0 +1,8 @@
+<div class="card">
+  <label class="chkbx" (click)="change()">
+    <input class="chkbx" type="checkbox" [checked]="todo.complete" />
+    <span></span>
+  </label>
+  <div class="text {{todo.complete}}">{{todo.text +' ('+ (todo.id | date: 'medium')+')' }}</div>
+  <i class="small material-icons" (click)="delete()">delete</i>
+</div>

@@ -1,0 +1,23 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">ToDo Angular</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="head">
+    <button class="btn-filter" (click)="showActive()">Активные</button>
+    <button class="btn-filter" (click)="showComplete()">Выполненые</button>
+    <button class="btn-filter" (click)="showAll()">Все</button>
+  </div>
+  <app-form
+    (onKeypress)="addToDo(getValue($event))"
+  ></app-form>
+  <card
+    *ngFor="let item of todo"
+    [todo]="item"
+    (onChange)="completeStatus(item.id)"
+    (onClick)="deleteToDo(item.id)"
+  ></card>
+</div>
